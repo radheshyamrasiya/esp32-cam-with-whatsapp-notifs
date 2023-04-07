@@ -42,18 +42,18 @@ const char *ssid = "123123123";
 const char *password = "123123123";
 
 // Trigger URLs: 7 URLs for maximum 7 enrolled faces (see FACE_ID_SAVE_NUMBER)
-const char *URL[] PROGMEM = {"https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=3fcf63be-6643-4862-9009-351fc85f42eb&token=284cf546-d5bd-4393-a2c3-c5c2274afe86&response=json",
-                             "https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=2da69858-7fd5-4f8d-9387-7500679875d4&token=18214b1b-2bf7-4545-acd1-2c7583b18abb&response=json",
-                             "https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=a4a4b96c-d412-4bb1-93df-401257318d82&token=9af48fed-4739-4d03-8433-42b5b1b23db8&response=json",
+const char *URL[] PROGMEM = {"urlss here",
+                             "",
+                             "",
                              "",
                              "",
                              "",
                              ""                             
                             };
 
-const char *WURL[] PROGMEM = {"https://api.callmebot.com/whatsapp.php?phone=918839315025&text=devansh+is+at+the+door&apikey=1564418",
-                             "https://api.callmebot.com/whatsapp.php?phone=918839315025&text=joseph+is+at+the+door&apikey=1564418",
-                             "https://api.callmebot.com/whatsapp.php?phone=918839315025&text=yatesh+is+at+the+door&apikey=1564418",
+const char *WURL[] PROGMEM = {"https://api.callmebot.com/whatsapp.php?phone=91883931&text=devansh+is+at+the+door&apikey=",
+                             "https://api.callmebot.com/whatsapp.php?phone=91883931&text=joseph+is+at+the+door&apikey=",
+                             "https://api.callmebot.com/whatsapp.php?phone=91883931&text=yatesh+is+at+the+door&apikey=",
                              "",
                              "",
                              "",
@@ -329,8 +329,8 @@ void ReqURL(int i) {
 void strangerDetected(){
   HTTPClient https;
 
-  String strangerURL = " https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=2b925c75-adf4-4c47-99b4-89e152d4bf7f&token=6c4a286a-fcaa-4b75-8141-a5d205301016&response=json";
-  String strangerWURL = "https://api.callmebot.com/whatsapp.php?phone=918839315025&text=a+stranger+is+at+the+door&apikey=1564418";
+  String strangerURL = " https://www.virtualsmarthome.xyz/url_routine_trigger/acta-4b75-8141-a5d21016&response=json";
+  String strangerWURL = "https://api.callmebot.com/whatsapp.php?phone=925&text=a+stranger+is+at+the+door&apikey=";
   if (https.begin(client, strangerURL)) {  // Set HTTPS request for URL i
       
       int httpCode = https.GET();       // Request URL
